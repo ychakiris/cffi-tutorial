@@ -506,7 +506,7 @@ struct curl_slist {
 
 (defparameter +LONG+          +CURLOPTTYPE_LONG+)
 (defparameter +OBJECTPOINT+   +CURLOPTTYPE_OBJECTPOINT+)
-(export +OBJECTPOINT+)
+(export '+OBJECTPOINT+)
 (defparameter +STRINGPOINT+   +CURLOPTTYPE_OBJECTPOINT+)
 (defparameter +SLISTPOINT+    +CURLOPTTYPE_OBJECTPOINT+)
 (defparameter +FUNCTIONPOINT+ +CURLOPTTYPE_FUNCTIONPOINT+)
@@ -525,7 +525,7 @@ struct curl_slist {
                  collect (list (keyword-name name) (+ (num-type type) number))))
        ',name)))
 
-(define-curl-options test1 (writedata +objectpoint+ 1))
+   (define-curl-options test1 (writedata +objectpoint+ 1))
 
 #|
 /* handy aliases that make no run-time difference */
